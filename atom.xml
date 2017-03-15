@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-15T03:24:38.374Z</updated>
+  <updated>2017-03-15T04:45:13.898Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/15/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E7%BA%AA%E5%BD%95/"/>
     <id>http://yoursite.com/2017/03/15/个人博客搭建全纪录/</id>
     <published>2017-03-15T01:08:13.000Z</published>
-    <updated>2017-03-15T03:24:38.374Z</updated>
+    <updated>2017-03-15T04:45:13.898Z</updated>
     
     <content type="html"><![CDATA[<p>耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页经验的自己，而Hexo全命令行的操作更容易上手。虽然现有的主题个人感觉没有特别中意的，不过最终还是选择了Github上面星星最多的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>。此主题简洁至上，比较适合不喜欢花哨的人群。而且此主题有比较详细的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方使用文档</a>。所以如果你纠结于选择什么主题而抓狂的时候，NEXT是一个不错的尝试。曾经也考虑过使用云主机搭建一个完全独立的博客，但考虑到自己是穷逼学生，而Github的博客有免费的300M空间，何乐而不为呢？ 最后为了避免后面的同学踩坑，将搭建博客的所有细节记录供后人参考。</p>
 <a id="more"></a>
