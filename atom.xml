@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-15T03:17:04.450Z</updated>
+  <updated>2017-03-15T03:24:38.374Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://yoursite.com/2017/03/15/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E7%BA%AA%E5%BD%95/"/>
     <id>http://yoursite.com/2017/03/15/个人博客搭建全纪录/</id>
     <published>2017-03-15T01:08:13.000Z</published>
-    <updated>2017-03-15T03:17:04.450Z</updated>
+    <updated>2017-03-15T03:24:38.374Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页经验的自己，而Hexo全命令行的操作更容易上手。虽然现有的主题个人感觉没有特别中意的，不过最终还是选择了Github上面星星最多的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>。此主题简洁至上，比较适合不喜欢花哨的人群。而且此主题有比较详细的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方使用文档</a>。所以如果你纠结于选择什么主题而抓狂的时候，NEXT是一个不错的尝试。曾经也考虑过使用云主机搭建一个完全独立的博客，但考虑到自己是穷逼学生，而Github的博客有免费的300M空间，何乐而不为呢？ 最后为了避免后面的同学踩坑，将搭建博客的所有细节记录如下。</p>
+    <content type="html"><![CDATA[<p>耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页经验的自己，而Hexo全命令行的操作更容易上手。虽然现有的主题个人感觉没有特别中意的，不过最终还是选择了Github上面星星最多的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>。此主题简洁至上，比较适合不喜欢花哨的人群。而且此主题有比较详细的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方使用文档</a>。所以如果你纠结于选择什么主题而抓狂的时候，NEXT是一个不错的尝试。曾经也考虑过使用云主机搭建一个完全独立的博客，但考虑到自己是穷逼学生，而Github的博客有免费的300M空间，何乐而不为呢？ 最后为了避免后面的同学踩坑，将搭建博客的所有细节记录供后人参考。</p>
+<a id="more"></a>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页经验的自己，而Hexo全命令行的操作更容易上手。虽然现有的主题个人感觉没有特别中意的，不过最终还是选择了Github上面星星最多的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>。此主题简洁至上，比较适合不喜欢花哨的人群。而且此主题有比较详细的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方使用文档</a>。所以如果你纠结于选择什么主题而抓狂的时候，NEXT是一个不错的尝试。曾经也考虑过使用云主机搭建一个完全独立的博客，但考虑到自己是穷逼学生，而Github的博客有免费的300M空间，何乐而不为呢？ 最后为了避免后面的同学踩坑，将搭建博客的所有细节记录如下。</p>
 <h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><h4 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h4><p>首先声明，本人是在Linux系统上进行博客环境的搭建。</p>
 <p>– 1. <strong>首先需要一个<a href="https://github.com/YanceyZhangDL/YanceyZhangDL.github.io" target="_blank" rel="external">Github Pages</a></strong>,当前前提是你要注册一个Github的账号</p>
 <p>– 2. <strong>本地配置Hexo开发环境</strong>(Hexo和Jekyll的作用一样，主要是省去我们完全自己部署博客的时间，不但提供了好看的主题，而且与Github Pages结合可以简便快捷的管理博客，博客编辑使用Markdown格式，同样是现在的主流)。</p>
@@ -65,12 +67,12 @@
 <p>– 3. 然后注册DNSPod，添加域名，添加记录。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1. 添加域名填写你的域名，不用添加http://，然后在点击你的域名点进去在添加记录（其中记录中CHAME的值是你的github pages的地址）。</div><div class="line"></div><div class="line">2. 再添加两条A记录：</div><div class="line">@　A　默认　192.30.252.154</div><div class="line">@　A　默认　192.30.252.153</div><div class="line"></div><div class="line">3. 启用就可以了。</div></pre></td></tr></table></figure></p>
 <p>– 4. 最后把本地的Hexo文件重新部署发布到Github Pages(hexo d -g)，打开你的域名，奇迹发生了～</p>
 <p>作者的个人博客地址：yanceyzhang.me，欢迎踩踏～</p>
-<h4 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h4><p>– 1. Hexo官网：<a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a><br>– 2. Hexo部署：<a href="http://www.tuicool.com/articles/m6fE32" target="_blank" rel="external">http://www.tuicool.com/articles/m6fE32</a><br>– 3. Hexo写一篇新的文章：<a href="http://www.cnblogs.com/fengsehng/p/6050527.html" target="_blank" rel="external">http://www.cnblogs.com/fengsehng/p/6050527.html</a><br>– 4. 博客是如何搭建的(github pages+HEXO+域名绑定)：<a href="http://www.jianshu.com/p/834d7cc0668d" target="_blank" rel="external">http://www.jianshu.com/p/834d7cc0668d</a>　<br>– 5. 手把手教你使用Hexo：<a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/</a></p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p>– 1. Hexo官网：<a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a><br>– 2. Hexo部署：<a href="http://www.tuicool.com/articles/m6fE32" target="_blank" rel="external">http://www.tuicool.com/articles/m6fE32</a><br>– 3. Hexo写一篇新的文章：<a href="http://www.cnblogs.com/fengsehng/p/6050527.html" target="_blank" rel="external">http://www.cnblogs.com/fengsehng/p/6050527.html</a><br>– 4. 博客是如何搭建的(github pages+HEXO+域名绑定)：<a href="http://www.jianshu.com/p/834d7cc0668d" target="_blank" rel="external">http://www.jianshu.com/p/834d7cc0668d</a>　<br>– 5. 手把手教你使用Hexo：<a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页
+      &lt;p&gt;耗时一天，踩了许多坑之后，自己的独立博客终于算是搭建完成了。前后了解了Jekyll和Hexo的搭建过程，发现Jekyll并不适合没有什么网页经验的自己，而Hexo全命令行的操作更容易上手。虽然现有的主题个人感觉没有特别中意的，不过最终还是选择了Github上面星星最多的&lt;a href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;Next&lt;/a&gt;。此主题简洁至上，比较适合不喜欢花哨的人群。而且此主题有比较详细的&lt;a href=&quot;http://theme-next.iissnan.com/getting-started.html&quot;&gt;官方使用文档&lt;/a&gt;。所以如果你纠结于选择什么主题而抓狂的时候，NEXT是一个不错的尝试。曾经也考虑过使用云主机搭建一个完全独立的博客，但考虑到自己是穷逼学生，而Github的博客有免费的300M空间，何乐而不为呢？ 最后为了避免后面的同学踩坑，将搭建博客的所有细节记录供后人参考。&lt;/p&gt;
     
     </summary>
     
