@@ -89,15 +89,20 @@
 
 
 
-<meta name="description" content="求知若渴，虚怀若愚">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gemini">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[译]Show, attend and tell: 深度学习进行语义理解的的细节[上]">
+<meta property="og:url" content="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/index.html">
 <meta property="og:site_name" content="Gemini">
-<meta property="og:description" content="求知若渴，虚怀若愚">
+<meta property="og:description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
+<meta property="og:image" content="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/image-captioning.png?resize=650%2C379">
+<meta property="og:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386">
+<meta property="og:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254">
+<meta property="og:updated_time" content="2017-03-22T12:44:45.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gemini">
-<meta name="twitter:description" content="求知若渴，虚怀若愚">
+<meta name="twitter:title" content="[译]Show, attend and tell: 深度学习进行语义理解的的细节[上]">
+<meta name="twitter:description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
+<meta name="twitter:image" content="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/image-captioning.png?resize=650%2C379">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/"/>
 
 
 
 
 
-  <title> Gemini </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> [译]Show, attend and tell: 深度学习进行语义理解的的细节[上] | Gemini </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -166,9 +171,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,155 +264,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yancey Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/messi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gemini">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" itemprop="url">
-                  [译]Show, attend and tell: 深度学习进行语义理解的的细节[下]
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T20:37:35+08:00">
-                2017-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" class="leancloud_visitors" data-flag-title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <center><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></center>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -439,10 +296,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/" itemprop="url">
-                  [译]Show, attend and tell: 深度学习进行语义理解的的细节[上]
-                </a>
+                [译]Show, attend and tell: 深度学习进行语义理解的的细节[上]
               
             
           </h1>
@@ -514,188 +368,71 @@
       
 
       
-        
-          <center><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></center>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
+        <center><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></center>
 
-    <div>
-      
-    </div>
+<a id="more"></a>
+<hr>
+<p>你们是如何与外星人交流的? 如何将自己的语言教会他们? 我们教孩子们学习的方法正确吗? 是的，我们通过将各种不同的物体展示给他们并告诉他们物体的名字来教会他们。</p>
+<p>将图片和文字的信息结合起来, 这就是自动图像标注的目标。</p>
+<p>这是一个宽泛而又棘手的问题，为此前人已经做出了几十年的努力。仅凭一篇博客是无法将这一领域的问题全部归纳清楚的，就像仅阅读标题和看这幅图片的内容是截然不同的。但是在这里，我们可以做出尝试。</p>
+<center><br><img src="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/image-captioning.png?resize=650%2C379" alt="标注图片" title="图1: 标注图片"><br></center>
 
-    <div>
-      
-    </div>
+<p>如果你的目的仅仅是<strong>使用</strong>一个目前通用的图像标注系统，那么事情变得很简单了，因为Google已经有基于Tensorflow的开源的图像标注代码<a href="https://github.com/tensorflow/models/tree/master/im2txt/im2txt" target="_blank" rel="external">im2txt</a>。如果你使用Torch/lua，那么Karpathy的NeuralTalk2对你来说是一个入门的好开端，他们的代码也已经在<a href="https://github.com/karpathy/neuraltalk2" target="_blank" rel="external">Github</a>上面开源了。但是你必须要知道的是，Google在这方面已经做了大量的工程实践来使得系统适合实际的应用，所以基于TensorFlow的实现更推荐你来使用。</p>
+<p>在这篇博客中，我们将讨论现阶段图像标注领域中涉及到的最先进的理论以及应用基础。尽管在许多领域计算机几乎已经达到了与人类齐平的表现(e.g. <a href="http://venturebeat.com/2015/02/09/microsoft-researchers-say-their-newest-deep-learning-system-beats-humans-and-google/" target="_blank" rel="external">图像分类</a>，<a href="https://www.technologyreview.com/s/544651/baidus-deep-learning-system-rivals-people-at-speech-recognition/" target="_blank" rel="external">语音识别</a>，<a href="http://fortune.com/2015/03/17/google-facenet-artificial-intelligence/" target="_blank" rel="external">人脸识别</a>)。然而，在自动图像标注领域，尽管已经有了几十年的研究，但是标注水平距离人类还差得很远。但是深度学习在物体识别，定位以及细粒度属性识别领域的高速发展对图像标注问题的准确率带来了前所未有的提升。早期的方法涉及通过图像检索来发现语义相似的图像，从索引数据库传送最相关的描述。但是显而易见，他们的应用范围是十分受限的。</p>
+<p>目前的图像标注方法可以被分成三种：</p>
+<ol>
+<li>第一类方法检测对象和属性，然后从包含那些对象的短语中合并图像的描述。</li>
+<li>第二类方法将图像和对应的标注嵌入在相同的向量空间中。对于给定的查询，检索最接近嵌入空间中的图像的标注，并且修改这些标注以生成给定图像的新标注。然而，这些方法无法产生给定测试图像的新描述，因为来自最相似图像的描述用于突出标注。</li>
+<li>第三类方法直接生成以输入图像和先前生成的词汇为条件的图像标注序列。因此，它们可以产生在训练数据中可能从未出现的词的新颖组合。<strong>这已经成为图像标注领域中最先进的算法中经常采用的标准方法</strong>。下面我们将着重阐述这种方法。</li>
+</ol>
+<h3 id="循环神经网络rnn为解锁方法"><a href="#循环神经网络-RNN-为解锁方法" class="headerlink" title="循环神经网络(RNN)为解锁方法"></a>循环神经网络(RNN)为解锁方法</h3><p>对于图像标注任务，模型被用于对给定的图像产生正确的标注序列。这可以被转化成寻找使得如下对数概率获得最大值的标注序列：</p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/个人博客搭建全纪录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yancey Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/messi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gemini">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/15/个人博客搭建全纪录/" itemprop="url">
-                  个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T09:08:13+08:00">
-                2017-03-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/15/个人博客搭建全纪录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/15/个人博客搭建全纪录/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/03/15/个人博客搭建全纪录/" class="leancloud_visitors" data-flag-title="个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <!-- toc -->
+<p>$$<br>\log p\left( S | I\right) =\sum _{t=0}^{N}\log p\left( S_{t}|S_{0},S_{1},\ldots S_{t-1}\right) \tag{公式 1}<br>$$</p>
+<p>在上式中：</p>
 <ul>
-<li><a href="#一-环境准备">一、环境准备</a></li>
-<li><a href="#二-github-pages搭建">二、Github Pages搭建</a></li>
-<li><a href="#三-hexo环境搭建并绑定github-pages">三、Hexo环境搭建并绑定Github Pages</a><ul>
-<li><a href="#1-安装">1. 安装</a></li>
-<li><a href="#2-主题切换">2. 主题切换</a></li>
-<li><a href="#3-绑定github-pages并发布">3. 绑定Github Pages并发布</a></li>
-<li><a href="#4-写一篇新的文章">4. 写一篇新的文章</a></li>
+<li>S 是最终生成的标注，</li>
+<li>\( S_{t} \)是在位置t的标注(\(t_{th}\) word)</li>
 </ul>
-</li>
-<li><a href="#四-个人域名绑定可选">四、个人域名绑定(可选)</a></li>
-<li><a href="#参考文章">参考文章</a></li>
-</ul>
-<!-- tocstop -->
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/15/个人博客搭建全纪录/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>输出单词的概率取决于先前生成的单词和输入图像，因此在方程中对这些变量进行调节。训练数据由数千个图像和与每个图像相关联的标注组成。训练数据中的标注由人手动书写。训练阶段包括找到在训练集中使得图像的标注概率最大化的模型参数。</p>
+<p>在概率图模型中，对于这种密集连接的节点变量，其中每个节点依赖于所有其他节点，由于指数级的可能的配置数目，训练在计算上变得不可行。循环神经网络（RNN）提供了一种使用固定大小的隐藏向量来执行对先前变量的调节的平滑方法。</p>
+<p>隐藏向量的作用如同前馈神经网络一样，被用来预测下一个输出的单词。</p>
+<p>$$<br>p\left( S_{t}|S_{0},S_{1},\ldots S_{t-1}\right) = p\left(S_{t}|I, h_{t} \right) \tag{公式 2}<br>$$</p>
+<p>所以在步骤t，可变数量节点的复杂条件被一个简单的向量\(h_{t}\)所取代。然后为了做出在时间t的预测，上式用一个全连接层来对所有单词的概率分布进行建模， 全连接层输出的向量长度为词汇表中单词的数量，紧接着输出为一个全连接层。所以 \( p\left(S_{t}|I, h_{t}\right) \)变成</p>
+<p>$$<br>p\left(S_{t}|I, h_{t} \right) = softmax\left(L_{h}h_{t}+L_{I}I\right) \tag{公式 3}<br>$$</p>
+<p>上式中\(L_{h}\)和\(L_{i}\)是全连接层的权重矩阵，输入作为\(h_{t}\)和\(I\)的一个级联向量。</p>
+<p>根据输出的概率分布，拥有最大概率的单词被当做标注的下一个单词。在\(t+1\)步中，先前生成的单词的条件也要将新生成的单词\((S_{t})\)包含进去。但是RNN向量\((h_{t})\)以单词\(S_{1}, S_{2}…S_{t-1}, S_{t}\)为条件。所以\(S_{t}\) 通过一个线性层与\(h_{t}\) 结合，紧接着是一个非线性激励函数来计算\(h_{t+1}\)。这就是RNN单元，它包括了如下的计算：</p>
+<p>$$<br>h_{t+1} = tanh(W_{h}h_{t}+W_{s}S_{t}) \tag{公式 4}<br>$$</p>
+<center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386" alt="RNN" title="图2: RNN网络"><br></center>
+
+<p>整体的算法流程图如图2所示。</p>
+<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的相同参数集来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为循环神经网络。这样避免的网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
+<center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254" alt="RNN单元" title="图3"><br></center>
+
+<p>未完待续。</p>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -703,171 +440,42 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yancey Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/messi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gemini">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/15/个人博客搭建全纪录/" rel="next" title="个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)">
+                <i class="fa fa-chevron-left"></i> 个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/03/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <a href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" rel="prev" title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
+                [译]Show, attend and tell: 深度学习进行语义理解的的细节[下] <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T16:23:41+08:00">
-                2017-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/14/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/14/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/03/14/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="quick-start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -875,6 +483,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/"
+           data-title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[上]" data-url="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -894,8 +510,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/messi.jpg"
@@ -946,6 +571,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环神经网络rnn为解锁方法"><span class="nav-number">1.</span> <span class="nav-text">循环神经网络(RNN)为解锁方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1051,6 +692,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
