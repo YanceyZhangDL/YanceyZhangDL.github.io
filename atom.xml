@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-22T11:56:30.250Z</updated>
+  <updated>2017-03-22T12:00:31.148Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节/</id>
     <published>2017-03-22T00:47:48.000Z</published>
-    <updated>2017-03-22T11:56:30.250Z</updated>
+    <updated>2017-03-22T12:00:31.148Z</updated>
     
     <content type="html"><![CDATA[<center><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></center>
 
@@ -69,7 +69,7 @@
 <p>通过提取任何现有流行的卷积网络结构的倒数第二层（分类层之前）输出，可以将图像表示为特征向量。比如VGG-net，GoogleNet等。</p>
 <p>对于单词，我们希望这种表示能够在单词的意义上相近或者上下文可以落在相近的向量空间中。将单词转化为向量的方法称作word2vec，这是如今比较流行的一类方法。word2vec的灵感来自于这句著名的谚语：You shall know the word from the company it keeps”，通过这句话所传达的意义来学习词汇的表示。</p>
 <p>word2vec的学习通过一个与我们工作的领域相关的语料库来完成。我们以域“computer vision”为例。另\(w_{1}, w_{2}…w_{M}\)为语料库中不重复的唯一的单词，\(S_{w_{1}},S_{w_{2}}…S_{w_{M}}\)为对应的我们需要寻找的单词向量。为了确定单词向量，word2vec训练一个可以预测给定单词的上下文单词的系统。上下文单词被定义为在该单词两边的给定大小的窗口（这里是2）中出现的单词。比如，将如下的三句话当成我们的语料库。（这只是为了演示的目的。在真实的应用程序中，语料库应该非常大，以获得有意义的表示。）</p>
-<p>＆ensp; This blog is about deep learning and computer vision.</p>
+<p>This blog is about deep learning and computer vision.</p>
 <p>We love deep learning.</p>
 <p>We love computer vision.</p>
 ]]></content>
