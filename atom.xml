@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-22T10:58:48.366Z</updated>
+  <updated>2017-03-22T11:56:30.250Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节/</id>
     <published>2017-03-22T00:47:48.000Z</published>
-    <updated>2017-03-22T10:58:48.366Z</updated>
+    <updated>2017-03-22T11:56:30.250Z</updated>
     
     <content type="html"><![CDATA[<center><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></center>
 
@@ -61,7 +61,17 @@
 <center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386" alt="RNN" title="图2: RNN网络"><br></center>
 
 <p>整体的算法流程图如图2所示。</p>
-<p>未完待续。</p>
+<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的相同参数集来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为循环神经网络。这样避免的网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
+<center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254" alt="RNN单元" title="图３"><br></center>
+
+<p>在继续向下讲之前，需要提前解释一个在机器学习中非常重要的概念。通常，我们要将所有输入（图像，声音，单词等）都表示为向量，来方便后续的处理。你也可以将这个长度为n的向量看做n维空间中的一个点。但是为什么要将图像和单词用向量表示？因为我们理解向量空间，我们理解向量空间中的距离。例如。我们知道点（1,0,0）比三维空间中的点（0,5,0）更接近点（0,0,0）。如果我们可以在较高维度空间中用点表示两个单词，我们可以通过计算这些点在较高维度空间中的距离，来获取它们在意义或上下文中的相似程度。</p>
+<p>从概念上理解，将图像和单词表示为较高维空间中的点，听起来不错。困难的部分是弄清楚如何做到这一点。</p>
+<p>通过提取任何现有流行的卷积网络结构的倒数第二层（分类层之前）输出，可以将图像表示为特征向量。比如VGG-net，GoogleNet等。</p>
+<p>对于单词，我们希望这种表示能够在单词的意义上相近或者上下文可以落在相近的向量空间中。将单词转化为向量的方法称作word2vec，这是如今比较流行的一类方法。word2vec的灵感来自于这句著名的谚语：You shall know the word from the company it keeps”，通过这句话所传达的意义来学习词汇的表示。</p>
+<p>word2vec的学习通过一个与我们工作的领域相关的语料库来完成。我们以域“computer vision”为例。另\(w_{1}, w_{2}…w_{M}\)为语料库中不重复的唯一的单词，\(S_{w_{1}},S_{w_{2}}…S_{w_{M}}\)为对应的我们需要寻找的单词向量。为了确定单词向量，word2vec训练一个可以预测给定单词的上下文单词的系统。上下文单词被定义为在该单词两边的给定大小的窗口（这里是2）中出现的单词。比如，将如下的三句话当成我们的语料库。（这只是为了演示的目的。在真实的应用程序中，语料库应该非常大，以获得有意义的表示。）</p>
+<p>＆ensp; This blog is about deep learning and computer vision.</p>
+<p>We love deep learning.</p>
+<p>We love computer vision.</p>
 ]]></content>
     
     <summary type="html">
