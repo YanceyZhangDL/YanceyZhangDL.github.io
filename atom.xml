@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-23T01:37:16.255Z</updated>
+  <updated>2017-03-23T02:40:04.956Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/</id>
     <published>2017-03-22T12:37:35.000Z</published>
-    <updated>2017-03-23T01:37:16.255Z</updated>
+    <updated>2017-03-23T02:40:04.956Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote>
 
@@ -52,7 +52,7 @@
 <p>在每一步中，我们需要确定特征图上与当前步相关的特征区域。相关位置的特征向量将被馈送到RNN。所以，我们基于先前生成的单词来生成各个位置上对应的概率分布。\(L_{t,i} = 1\)意味着第i个位置被用来在第t步中生成当前的词汇。让\(a_i\)为从卷积特征图中提取的第i个位置所对应的特征向量。</p>
 <p>我们需要的值为：</p>
 <p>$$ p(L_{t, i} = 1 | I, S_0, S_1…S_{t-1} ) \approx p(L_{t, i} | h_t) = \beta_{t, i} \propto \alpha^T_i h_t $$</p>
-<p>在这里，选择位置\(\beta_{t, i}\)的概率被转化成正比于上式中的点乘，即该位置的特征向量与RNN隐藏向量的相似度。</p>
+<p>在这里，选择位置\(\beta_{t, i}\)的概率被转化成正比于上式中的<strong>点乘</strong>，即该位置的特征向量与RNN隐藏向量的相似度。</p>
 <p>现在在概率分布的基础上，可以使用与具有最大概率的特征位置相对应的特征向量进行预测，但是使用根据概率加权的所有位置向量的聚合向量可以使训练更简单快速地收敛。所以我们另\(z_t\)作为输入RNN的上下文或聚合向量。</p>
 <p>$$ z_t = \sum _{i=1}^{n}\beta_{t, i}\alpha_i $$</p>
 <p>所以公式2变为</p>
@@ -99,7 +99,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8A/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/</id>
     <published>2017-03-22T00:47:48.000Z</published>
-    <updated>2017-03-23T01:36:39.431Z</updated>
+    <updated>2017-03-23T02:53:57.141Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote><br><a id="more"></a></p>
 <hr>
@@ -138,7 +138,7 @@
 <center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386" alt="RNN" title="图2: RNN网络"><br></center>
 
 <p>整体的算法流程图如图2所示。</p>
-<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的相同参数集来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为循环神经网络。这样避免的网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
+<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的<strong>相同参数集</strong>来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为<strong>循环神经网络</strong>。这样避免了网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
 <center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254" alt="RNN单元" title="图3"><br></center>
 
 <p>未完待续。</p>

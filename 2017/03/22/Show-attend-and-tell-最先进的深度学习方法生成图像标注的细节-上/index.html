@@ -98,7 +98,7 @@
 <meta property="og:image" content="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/image-captioning.png?resize=650%2C379">
 <meta property="og:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386">
 <meta property="og:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254">
-<meta property="og:updated_time" content="2017-03-23T01:36:39.431Z">
+<meta property="og:updated_time" content="2017-03-23T02:53:57.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译]Show, attend and tell: 深度学习进行语义理解的的细节[上]">
 <meta name="twitter:description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
@@ -439,7 +439,7 @@
 <center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/RNN.jpg?resize=486%2C386" alt="RNN" title="图2: RNN网络"><br></center>
 
 <p>整体的算法流程图如图2所示。</p>
-<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的相同参数集来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为循环神经网络。这样避免的网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
+<p>由于RNN类似于由线性层和非线性层组合而成的前馈神经网络，所以训练期间的反向传播是直接的，不需要太多的推理计算。与正常神经网络的唯一区别在于，通过在每个步骤中的<strong>相同参数集</strong>来完成先前的隐藏向量和新产生的单词的组合。这相当于将输出馈送到与输入相同的网络，因此网络的名称为<strong>循环神经网络</strong>。这样避免了网络大小的激增，否则在每一个步骤都需要一组新的参数。RNN单元可以如图3代表所示。</p>
 <center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/semantics.jpg?resize=650%2C254" alt="RNN单元" title="图3"><br></center>
 
 <p>未完待续。</p>
