@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-23T01:20:30.295Z</updated>
+  <updated>2017-03-23T01:37:16.255Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/</id>
     <published>2017-03-22T12:37:35.000Z</published>
-    <updated>2017-03-23T01:20:30.295Z</updated>
+    <updated>2017-03-23T01:37:16.255Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote>
 
@@ -80,6 +80,18 @@
     </summary>
     
     
+      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Deep Learning" scheme="http://yoursite.com/tags/Deep-Learning/"/>
+    
+      <category term="RNN" scheme="http://yoursite.com/tags/RNN/"/>
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+      <category term="Attention" scheme="http://yoursite.com/tags/Attention/"/>
+    
+      <category term="image caption" scheme="http://yoursite.com/tags/image-caption/"/>
+    
   </entry>
   
   <entry>
@@ -87,7 +99,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8A/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/</id>
     <published>2017-03-22T00:47:48.000Z</published>
-    <updated>2017-03-23T01:20:27.343Z</updated>
+    <updated>2017-03-23T01:36:39.431Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote><br><a id="more"></a></p>
 <hr>
@@ -139,6 +151,18 @@
     </summary>
     
     
+      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Deep Learning" scheme="http://yoursite.com/tags/Deep-Learning/"/>
+    
+      <category term="RNN" scheme="http://yoursite.com/tags/RNN/"/>
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+      <category term="Attention" scheme="http://yoursite.com/tags/Attention/"/>
+    
+      <category term="image caption" scheme="http://yoursite.com/tags/image-caption/"/>
+    
   </entry>
   
   <entry>
@@ -146,7 +170,7 @@
     <link href="http://yoursite.com/2017/03/15/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E7%BA%AA%E5%BD%95/"/>
     <id>http://yoursite.com/2017/03/15/个人博客搭建全纪录/</id>
     <published>2017-03-15T01:08:13.000Z</published>
-    <updated>2017-03-22T10:56:39.891Z</updated>
+    <updated>2017-03-23T01:38:25.950Z</updated>
     
     <content type="html"><![CDATA[<!-- toc -->
 <ul>
@@ -231,6 +255,12 @@
     
     </summary>
     
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="域名" scheme="http://yoursite.com/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
