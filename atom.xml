@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-23T02:40:04.956Z</updated>
+  <updated>2017-04-01T11:57:39.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/</id>
     <published>2017-03-22T12:37:35.000Z</published>
-    <updated>2017-03-23T02:40:04.956Z</updated>
+    <updated>2017-04-01T11:57:39.634Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote>
 
@@ -67,6 +67,7 @@
 <li>使用LSTM(长短时记忆单元)来代替RNN，从而解决RNN中的梯度消失问题。</li>
 <li>Stochastic vs soft attention: 在这里，我们讨论了Soft attention机制，其中不同的位置向量是根据其个体的概率进行聚合的。在stochastic mechanism中，基于概率分布对单个位置进行采样，并仅将采样位置的特征向量用于到RNN单元之中。</li>
 </ol>
+<h3 id="implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><p>如果你想学习Show attend and tell模型的源代码，可以参考我的Github的一个简单实现<a href="https://github.com/YanceyZhangDL/show_attend_and_tell.tensorflow" target="_blank" rel="external">show_attend_and_tell.tensorflow</a>。当然我只是fork了某位大神的<a href="https://github.com/jazzsaxmafia/show_attend_and_tell.tensorflow" target="_blank" rel="external">源代码</a>, 并将代码更新到Tensorflow的1.0版本。此外，基于我自己的简陋的机器配置，进行了简单的优化。</p>
 <h3 id="references"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
 <li>Xu, J. Ba, R. Kiros, A. Courville, R. Salakhutdinov, R. Zemel, and Y. Bengio, Show, attend and tell: Neural image caption generation with visual attention</li>
 <li>Vinyals, A. Toshev, S. Bengio, and D. Erhan, Show and tell: A neural image caption generator</li>
