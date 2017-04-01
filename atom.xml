@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-01T11:57:39.634Z</updated>
+  <updated>2017-04-01T12:01:13.856Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/22/Show-attend-and-tell-%E6%9C%80%E5%85%88%E8%BF%9B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E6%A0%87%E6%B3%A8%E7%9A%84%E7%BB%86%E8%8A%82-%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/</id>
     <published>2017-03-22T12:37:35.000Z</published>
-    <updated>2017-04-01T11:57:39.634Z</updated>
+    <updated>2017-04-01T12:01:13.856Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote>
 
@@ -92,6 +92,8 @@
       <category term="Attention" scheme="http://yoursite.com/tags/Attention/"/>
     
       <category term="image caption" scheme="http://yoursite.com/tags/image-caption/"/>
+    
+      <category term="Tensorflow" scheme="http://yoursite.com/tags/Tensorflow/"/>
     
   </entry>
   
