@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-01T12:01:13.856Z</updated>
+  <updated>2017-04-24T02:50:54.869Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Matplotlib的一些奇淫技巧</title>
+    <link href="http://yoursite.com/2017/04/24/%E4%BD%BF%E7%94%A8Matplotlib%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2017/04/24/使用Matplotlib的一些奇淫技巧/</id>
+    <published>2017-04-24T02:30:48.000Z</published>
+    <updated>2017-04-24T02:50:54.869Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～<br></blockquote><br><a id="more"></a></p>
+<h3 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h3><p>写毕设的过程中需要绘制大量的曲线以及图表，除了一些简单的图用Latex直接绘制之外，大量的曲线图还是要交给Matplotlib，其实也不能说是奇淫技巧，只是一些功能的总结罢了。一是为自己以后画图方便参考，二也为了大家在画图的过程中节省一些Google的时间</p>
+<h3 id="一-坐标轴相关操作"><a href="#一、坐标轴相关操作" class="headerlink" title="一、坐标轴相关操作"></a>一、坐标轴相关操作</h3><h5 id="matplotlib隐藏坐标轴"><a href="#Matplotlib隐藏坐标轴" class="headerlink" title="Matplotlib隐藏坐标轴"></a>Matplotlib隐藏坐标轴</h5><p>$plt.axis(‘off’)$命令是最靠谱的<strong>隐藏坐标轴</strong>的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">from numpy import random</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">data = random.random((5,5))</div><div class="line">img = plt.imshow(data, interpolation=&apos;nearest&apos;)</div><div class="line">img.set_cmap(&apos;hot&apos;)</div><div class="line">plt.axis(&apos;off&apos;)</div><div class="line">plt.savefig(&quot;test.png&quot;, bbox_inches=&apos;tight&apos;)</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m1.png" alt="m1"><br></center>
+
+<p>另一种方法是通过分别调整坐标轴刻度范围和边界的显示来使坐标轴隐藏，但这种方法对于colormap的显示有时候会失效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure()</div><div class="line"></div><div class="line"># 定义子图</div><div class="line">ax = fig.add_subplot(111)</div><div class="line"></div><div class="line"># 隐藏坐标轴</div><div class="line">ax.set_xticks([])</div><div class="line">ax.set_yticks([])</div><div class="line">ax.spines[&apos;right&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;bottom&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;left&apos;].set_color(&apos;none&apos;)</div></pre></td></tr></table></figure>
+<h5 id="移动坐标轴位置以及调整刻度范围"><a href="#移动坐标轴位置以及调整刻度范围" class="headerlink" title="移动坐标轴位置以及调整刻度范围"></a>移动坐标轴位置以及调整刻度范围</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import matplotlib</div><div class="line">import matplotlib.pyplot as plt</div><div class="line"></div><div class="line"># Data to be represented</div><div class="line">X = np.linspace(-np.pi,+np.pi,256)</div><div class="line">Y = np.sin(X)</div><div class="line"></div><div class="line"># Actual plotting</div><div class="line">fig = plt.figure(figsize=(8,6), dpi=72,facecolor=&quot;white&quot;)</div><div class="line">ax = plt.subplot(111)</div><div class="line">ax.plot(X,Y, color = &apos;blue&apos;, linewidth=2, linestyle=&quot;-&quot;)</div><div class="line"># 设置x轴和y轴的范围</div><div class="line">ax.set_xlim(1.1*X.min(),1.1*X.max())</div><div class="line">ax.set_ylim(1.1*Y.min(),1.1*Y.max())</div><div class="line"></div><div class="line"># 隐藏上坐标轴和右边的坐标轴边界</div><div class="line">ax.spines[&apos;right&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;)</div><div class="line"># 将左边和下面的坐标轴移动到x, y坐标的零位置处</div><div class="line">ax.spines[&apos;bottom&apos;].set_position((&apos;data&apos;,0))</div><div class="line">ax.spines[&apos;left&apos;].set_position((&apos;data&apos;,0))</div><div class="line"># 设置坐标轴的刻度为空</div><div class="line">ax.set_xticks([])</div><div class="line">ax.set_yticks([])</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m2.png" alt="m2"><br></center>
+
+<h5 id="修改坐标轴范围以及坐标轴显示刻度"><a href="#修改坐标轴范围以及坐标轴显示刻度" class="headerlink" title="修改坐标轴范围以及坐标轴显示刻度"></a>修改坐标轴范围以及坐标轴显示刻度</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">axes.set_xticks([0., .5*np.pi, np.pi])</div><div class="line">axes.set_xticklabels([&quot;0&quot;, r&quot;$\frac&#123;1&#125;&#123;2&#125;\pi$&quot;,r&quot;$\pi$&quot;])</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m3.png" alt="m3"><br></center>
+
+<h5 id="调整子图之间的间距"><a href="#调整子图之间的间距" class="headerlink" title="调整子图之间的间距"></a>调整子图之间的间距</h5><p>使用figure的subplots_adjust方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">subplots_adjust(left=None, bottom=None, right=None, top=None,</div><div class="line">                    wspace=None, hspace=None)</div></pre></td></tr></table></figure>
+<p>其中wspace和hspace控制子图的左右以及上下之间的间距。比如，我可以将他们都设置为0:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fig.subplots_adjust(wspace=0, hspace=0)</div></pre></td></tr></table></figure>
+<h3 id="二-图像的缩放与旋转"><a href="#二、图像的缩放与旋转" class="headerlink" title="二、图像的缩放与旋转"></a>二、图像的缩放与旋转</h3><p>缩放与旋转使用的是skimage的transform模块。具体的模块使用方法可以在python交互环境中输入help(transform)来查看</p>
+<h5 id="图像尺寸变换"><a href="#图像尺寸变换" class="headerlink" title="图像尺寸变换"></a>图像尺寸变换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 函数：skimage.transform.resize(image, output_shape)</div><div class="line">from skimage import transform,data</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">img = plt.imread(&quot;test.png&quot;)</div><div class="line">dst=transform.resize(img, (80, 60))</div><div class="line">plt.figure(&apos;resize&apos;)</div><div class="line"></div><div class="line">plt.subplot(121)</div><div class="line">plt.title(&apos;before resize&apos;)</div><div class="line">plt.imshow(img,plt.cm.gray)</div><div class="line"></div><div class="line">plt.subplot(122)</div><div class="line">plt.title(&apos;before resize&apos;)</div><div class="line">plt.imshow(dst,plt.cm.gray)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m4.png" alt="m4"><br></center>
+
+<h5 id="其他函数具体可以在python中使用help命令查看"><a href="#其他函数-具体可以在python中使用help命令查看" class="headerlink" title="其他函数(具体可以在python中使用help命令查看)"></a>其他函数(具体可以在python中使用help命令查看)</h5><ol>
+<li>按比例缩放rescale<br>函数格式为：<br>skimage.transform.rescale(image, scale[, …])<br>scale参数可以是单个float数，表示缩放的倍数，也可以是一个float型的tuple，如[0.2,0.5],表示将行列数分开进行缩放。</li>
+</ol>
+<ol>
+<li>旋转 rotate<br>skimage.transform.rotate(image, angle[, …],resize=False)<br>angle参数是个float类型数，表示旋转的度数<br>resize用于控制在旋转时，是否改变大小 ，默认为False</li>
+</ol>
+<h3 id="三-图像保存"><a href="#三、图像保存" class="headerlink" title="三、图像保存"></a>三、图像保存</h3><p>$plt.savefig()$ 可以将当前图表保存到文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plt.savefig(&apos;haha.png&apos;, dpi=400, bbox_inches=&apos;tight&apos;)</div></pre></td></tr></table></figure>
+<p>参数：</p>
+<ul>
+<li>format = png pdf svg ps eps… : 导出的文件格式</li>
+<li>dpi：文件的分辨率</li>
+<li>facecolor, edgecolor : 图像的背景色 默认是 ‘w’ 白色</li>
+</ul>
+<h3 id="四-读取文件夹下面的多张图片"><a href="#四、读取文件夹下面的多张图片" class="headerlink" title="四、读取文件夹下面的多张图片"></a>四、读取文件夹下面的多张图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">def getAllImages(folder):</div><div class="line">    assert os.path.exists(folder)</div><div class="line">    assert os.path.isdir(folder)</div><div class="line">    imageList = os.listdir(folder)</div><div class="line">    #pprint.pprint(imageList)</div><div class="line">    imageList = [os.path.abspath(item) for item in imageList if os.path.isfile(os.path.join(folder, item))]</div><div class="line">    return imageList</div><div class="line"></div><div class="line">imglist = getAllImages(img_dir)</div></pre></td></tr></table></figure>
+<h4 id="五-参考文献"><a href="#五、参考文献" class="headerlink" title="五、参考文献"></a>五、参考文献</h4><ol>
+<li>坐标轴：<a href="http://stackoverflow.com/questions/9295026/matplotlib-plots-removing-axis-legends-and-white-spaces" target="_blank" rel="external">http://stackoverflow.com/questions/9295026/matplotlib-plots-removing-axis-legends-and-white-spaces</a></li>
+<li>尺度变换：<a href="http://blog.csdn.net/wuxinxin559/article/details/46363495" target="_blank" rel="external">http://blog.csdn.net/wuxinxin559/article/details/46363495</a></li>
+<li>图片保存：<a href="http://staticor.io/post/pydata/pydata-hui-tu-he-ke-shi-hua-1-plt" target="_blank" rel="external">http://staticor.io/post/pydata/pydata-hui-tu-he-ke-shi-hua-1-plt</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="matplotlib" scheme="http://yoursite.com/tags/matplotlib/"/>
+    
+      <category term="坐标轴" scheme="http://yoursite.com/tags/%E5%9D%90%E6%A0%87%E8%BD%B4/"/>
+    
+      <category term="移动" scheme="http://yoursite.com/tags/%E7%A7%BB%E5%8A%A8/"/>
+    
+      <category term="隐藏" scheme="http://yoursite.com/tags/%E9%9A%90%E8%97%8F/"/>
+    
+      <category term="文件保存" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98/"/>
+    
+      <category term="连续读取" scheme="http://yoursite.com/tags/%E8%BF%9E%E7%BB%AD%E8%AF%BB%E5%8F%96/"/>
+    
+  </entry>
   
   <entry>
     <title>[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]</title>

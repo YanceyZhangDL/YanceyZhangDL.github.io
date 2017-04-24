@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="深度学习,Deep Learning,RNN,CNN,Attention,image caption,Tensorflow," />
+  <meta name="keywords" content="matplotlib,坐标轴,移动,隐藏,文件保存,连续读取," />
 
 
 
@@ -89,19 +89,21 @@
 
 
 
-<meta name="description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
+<meta name="description" content="教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/index.html">
+<meta property="og:title" content="使用Matplotlib的一些奇淫技巧">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/使用Matplotlib的一些奇淫技巧/index.html">
 <meta property="og:site_name" content="Gemini">
-<meta property="og:description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
-<meta property="og:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/cnn.png?resize=650%2C200">
-<meta property="og:image" content="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/attention.png?resize=575%2C393">
-<meta property="og:updated_time" content="2017-04-01T12:01:13.856Z">
+<meta property="og:description" content="教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～">
+<meta property="og:image" content="http://yoursite.com/img/m1.png">
+<meta property="og:image" content="http://yoursite.com/img/m2.png">
+<meta property="og:image" content="http://yoursite.com/img/m3.png">
+<meta property="og:image" content="http://yoursite.com/img/m4.png">
+<meta property="og:updated_time" content="2017-04-24T02:50:54.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
-<meta name="twitter:description" content="你们是如何与外星人交流的?如何将自己的语言教会他们?我们教孩子们学习的方法正确吗?">
-<meta name="twitter:image" content="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/cnn.png?resize=650%2C200">
+<meta name="twitter:title" content="使用Matplotlib的一些奇淫技巧">
+<meta name="twitter:description" content="教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～">
+<meta name="twitter:image" content="http://yoursite.com/img/m1.png">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/使用Matplotlib的一些奇淫技巧/"/>
 
 
 
 
 
-  <title> [译]Show, attend and tell: 深度学习进行语义理解的的细节[下] | Gemini </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 使用Matplotlib的一些奇淫技巧 | Gemini </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -308,7 +310,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/使用Matplotlib的一些奇淫技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yancey Zhang">
@@ -329,7 +331,7 @@
             
             
               
-                [译]Show, attend and tell: 深度学习进行语义理解的的细节[下]
+                使用Matplotlib的一些奇淫技巧
               
             
           </h1>
@@ -344,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T20:37:35+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T10:30:48+08:00">
+                2017-04-24
               </time>
             
 
@@ -363,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" itemprop="commentCount"></span>
+                <a href="/2017/04/24/使用Matplotlib的一些奇淫技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/24/使用Matplotlib的一些奇淫技巧/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,7 +374,7 @@
 
           
           
-             <span id="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" class="leancloud_visitors" data-flag-title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
+             <span id="/2017/04/24/使用Matplotlib的一些奇淫技巧/" class="leancloud_visitors" data-flag-title="使用Matplotlib的一些奇淫技巧">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,55 +403,47 @@
       
 
       
-        <blockquote class="blockquote-center"><br>你们是如何与外星人交流的?<br>如何将自己的语言教会他们?<br>我们教孩子们学习的方法正确吗?<br></blockquote>
+        <p><blockquote class="blockquote-center"><br>教你使用Matplotlib画图的一些基础功能之外的奇淫技巧～<br></blockquote><br><a id="more"></a></p>
+<h3 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h3><p>写毕设的过程中需要绘制大量的曲线以及图表，除了一些简单的图用Latex直接绘制之外，大量的曲线图还是要交给Matplotlib，其实也不能说是奇淫技巧，只是一些功能的总结罢了。一是为自己以后画图方便参考，二也为了大家在画图的过程中节省一些Google的时间</p>
+<h3 id="一-坐标轴相关操作"><a href="#一、坐标轴相关操作" class="headerlink" title="一、坐标轴相关操作"></a>一、坐标轴相关操作</h3><h5 id="matplotlib隐藏坐标轴"><a href="#Matplotlib隐藏坐标轴" class="headerlink" title="Matplotlib隐藏坐标轴"></a>Matplotlib隐藏坐标轴</h5><p>$plt.axis(‘off’)$命令是最靠谱的<strong>隐藏坐标轴</strong>的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">from numpy import random</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">data = random.random((5,5))</div><div class="line">img = plt.imshow(data, interpolation=&apos;nearest&apos;)</div><div class="line">img.set_cmap(&apos;hot&apos;)</div><div class="line">plt.axis(&apos;off&apos;)</div><div class="line">plt.savefig(&quot;test.png&quot;, bbox_inches=&apos;tight&apos;)</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m1.png" alt="m1"><br></center>
 
-<a id="more"></a>
-<hr>
-<h3 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h3><p>在继续向下讲之前，需要提前解释一个在机器学习中非常重要的概念。通常，我们要将所有输入（图像，声音，单词等）都表示为向量，来方便后续的处理。你也可以将这个长度为n的向量看做n维空间中的一个点。但是为什么要将图像和单词用向量表示？因为我们理解向量空间，我们理解向量空间中的距离。例如。我们知道点（1,0,0）比三维空间中的点（0,5,0）更接近点（0,0,0）。如果我们可以在较高维度空间中用点表示两个单词，我们可以通过计算这些点在较高维度空间中的距离，来获取它们在意义或上下文中的相似程度。</p>
-<p>从概念上理解，将图像和单词表示为较高维空间中的点，听起来不错。困难的部分是弄清楚如何做到这一点。</p>
-<p>通过提取任何现有流行的卷积网络结构的倒数第二层（分类层之前）输出，可以将图像表示为特征向量。比如VGG-net，GoogleNet等。</p>
-<p>对于单词，我们希望这种表示能够在单词的意义上相近或者上下文可以落在相近的向量空间中。将单词转化为向量的方法称作word2vec，这是如今比较流行的一类方法。word2vec的灵感来自于这句著名的谚语：You shall know the word from the company it keeps”，通过这句话所传达的意义来学习词汇的表示。</p>
-<p>word2vec的学习通过一个与我们工作的领域相关的语料库来完成。我们以域“computer vision”为例。另\(w_{1}, w_{2}…w_{M}\)为语料库中不重复的唯一的单词，\(S_{w_1},S_{w_2}…S_{w_M}\)为对应的我们需要寻找的单词向量。为了确定单词向量，word2vec训练一个可以预测给定单词的上下文单词的系统。上下文单词被定义为在该单词两边的给定大小的窗口（这里是2）中出现的单词。比如，将如下的三句话当成我们的语料库。（这只是为了演示的目的。在真实的应用程序中，语料库应该非常大，以获得有意义的表示。）</p>
-<blockquote>
-<p>This blog is about deep learning and computer vision.</p>
-<p>We love deep learning.</p>
-<p>We love computer vision.</p>
-</blockquote>
-<p>给定单词”computer”，我们的任务是从第一句话中学习并预测上下文单词”learning”，”and”和”vision”并且从最后一句话中学习预测”we”，”love”和”vision”。因此，训练目标是使得给出“computer”一词的这些上下文单词的对数概率最大化。公式如下：</p>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<p>另一种方法是通过分别调整坐标轴刻度范围和边界的显示来使坐标轴隐藏，但这种方法对于colormap的显示有时候会失效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure()</div><div class="line"></div><div class="line"># 定义子图</div><div class="line">ax = fig.add_subplot(111)</div><div class="line"></div><div class="line"># 隐藏坐标轴</div><div class="line">ax.set_xticks([])</div><div class="line">ax.set_yticks([])</div><div class="line">ax.spines[&apos;right&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;bottom&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;left&apos;].set_color(&apos;none&apos;)</div></pre></td></tr></table></figure>
+<h5 id="移动坐标轴位置以及调整刻度范围"><a href="#移动坐标轴位置以及调整刻度范围" class="headerlink" title="移动坐标轴位置以及调整刻度范围"></a>移动坐标轴位置以及调整刻度范围</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import matplotlib</div><div class="line">import matplotlib.pyplot as plt</div><div class="line"></div><div class="line"># Data to be represented</div><div class="line">X = np.linspace(-np.pi,+np.pi,256)</div><div class="line">Y = np.sin(X)</div><div class="line"></div><div class="line"># Actual plotting</div><div class="line">fig = plt.figure(figsize=(8,6), dpi=72,facecolor=&quot;white&quot;)</div><div class="line">ax = plt.subplot(111)</div><div class="line">ax.plot(X,Y, color = &apos;blue&apos;, linewidth=2, linestyle=&quot;-&quot;)</div><div class="line"># 设置x轴和y轴的范围</div><div class="line">ax.set_xlim(1.1*X.min(),1.1*X.max())</div><div class="line">ax.set_ylim(1.1*Y.min(),1.1*Y.max())</div><div class="line"></div><div class="line"># 隐藏上坐标轴和右边的坐标轴边界</div><div class="line">ax.spines[&apos;right&apos;].set_color(&apos;none&apos;)</div><div class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;)</div><div class="line"># 将左边和下面的坐标轴移动到x, y坐标的零位置处</div><div class="line">ax.spines[&apos;bottom&apos;].set_position((&apos;data&apos;,0))</div><div class="line">ax.spines[&apos;left&apos;].set_position((&apos;data&apos;,0))</div><div class="line"># 设置坐标轴的刻度为空</div><div class="line">ax.set_xticks([])</div><div class="line">ax.set_yticks([])</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m2.png" alt="m2"><br></center>
 
-<p>$$<br>Objective = Maximize\sum _{t=1}^{T}\sum _{-m \geq j \geq m}\log P\left( s_{w_{t}+j}|S_{w_t}\right)<br>$$</p>
-<p>上式中，m为上下文窗口大小(这里是2)，t将整个语料库的单词循环一遍（在这里是将所有句子的单词循环一遍）。</p>
-<p>\( P(S_{w_{t+j} | S_{w_t}})\)由上下文向量和中心词向量之间的相似度或內积来建模。对于每个单词，都有两个向量与之相关联。当它作为上下文或中心词时分别由R和S来表示。</p>
-<p>所以\( P(S_{w_{t+j} | S_{w_t}})\)被看做\( \frac {e^{R^T_{w_{t+j}}}} {\sum _{i=1}^{M} e^{R^T_i S_{w_t}}} \)。这里分母是将中心词向量与词汇表中每个其他单词的上下文向量的相似度进行归一化，使得概率相加和为1。</p>
-<p>将每个单词的中心向量当做其向量表达，并同RNN在公式3中使用。</p>
-<h3 id="真实世界图片中的噪声处理注意力机制"><a href="#真实世界图片中的噪声处理：注意力机制" class="headerlink" title="真实世界图片中的噪声处理：注意力机制"></a>真实世界图片中的噪声处理：注意力机制</h3><p>当场景混乱时，简单的系统就很难生成复杂的图像描述。我们，人类，通过一睹图像的全局来排除干扰。当我们继续描述图像时，我们的焦点将转移到图像中的不同区域。对于计算机，已经提出了类似的注意机制来模拟人的行为。这种注意机制只允许图像中的重要特征在需要时出现在我们面前。在每个步骤中，确定图像的显着区域并将其馈送到RNN中，而不是使用来自整个图像的特征。系统从图像中获得关注的视图，并预测与该区域相关的单词。需要基于之前生成的单词来确定此步需要关注的图像区域。否则，新生成的单词可能与图像区域对应，但不会是我们的图像描述中所需要的。</p>
-<p>到目前为止，图像卷积层全连接层的输出作为RNN网络的输入。该输出对应于整个图像。那么，我们如何获得一个只对应一个图像的小部分的特征？卷积层的输出编码本地信息，而不是图像混乱的原始信息。卷积层的输出是2d特征图，其中每个位置受到与卷积核大小（感受野）相对应的图像区域的影响。要理解这一点，请看图4，其展示了一个卷积神经网络的样子。在输出层之前，有一个完全连接的层，就像一个伸展开的向量，代表整个输入图像，而卷积层的输出(全连接层之前的所有层)更像多维的2d图像。在某个特定位置的单个特征图中通过所有维度提取的向量表示图像的一个局部区域特征。</p>
-<center><br><img src="https://i1.wp.com/cv-tricks.com/wp-content/uploads/2017/01/cnn.png?resize=650%2C200" alt="卷积神经网络" title="图4"><br></center>
+<h5 id="修改坐标轴范围以及坐标轴显示刻度"><a href="#修改坐标轴范围以及坐标轴显示刻度" class="headerlink" title="修改坐标轴范围以及坐标轴显示刻度"></a>修改坐标轴范围以及坐标轴显示刻度</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">axes.set_xticks([0., .5*np.pi, np.pi])</div><div class="line">axes.set_xticklabels([&quot;0&quot;, r&quot;$\frac&#123;1&#125;&#123;2&#125;\pi$&quot;,r&quot;$\pi$&quot;])</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m3.png" alt="m3"><br></center>
 
-<p>在每一步中，我们需要确定特征图上与当前步相关的特征区域。相关位置的特征向量将被馈送到RNN。所以，我们基于先前生成的单词来生成各个位置上对应的概率分布。\(L_{t,i} = 1\)意味着第i个位置被用来在第t步中生成当前的词汇。让\(a_i\)为从卷积特征图中提取的第i个位置所对应的特征向量。</p>
-<p>我们需要的值为：</p>
-<p>$$ p(L_{t, i} = 1 | I, S_0, S_1…S_{t-1} ) \approx p(L_{t, i} | h_t) = \beta_{t, i} \propto \alpha^T_i h_t $$</p>
-<p>在这里，选择位置\(\beta_{t, i}\)的概率被转化成正比于上式中的<strong>点乘</strong>，即该位置的特征向量与RNN隐藏向量的相似度。</p>
-<p>现在在概率分布的基础上，可以使用与具有最大概率的特征位置相对应的特征向量进行预测，但是使用根据概率加权的所有位置向量的聚合向量可以使训练更简单快速地收敛。所以我们另\(z_t\)作为输入RNN的上下文或聚合向量。</p>
-<p>$$ z_t = \sum _{i=1}^{n}\beta_{t, i}\alpha_i $$</p>
-<p>所以公式2变为</p>
-<p>$$p(S_t | I, h_t) =&gt; p(S_t | z_t, h_t)$$</p>
-<p>因此，这种机制模拟人的行为，在描述图像的过程中将注意力集中在图像的不同位置，而且，通过这种集中的视角，可以为图像生成更加复杂的描述，甚至可以满足图像中更复杂的细节。图5展示了在文献1中的标注示例。</p>
-<center><br><img src="https://i0.wp.com/cv-tricks.com/wp-content/uploads/2017/01/attention.png?resize=575%2C393" alt="标注示例" title="图5"><br></center>
+<h5 id="调整子图之间的间距"><a href="#调整子图之间的间距" class="headerlink" title="调整子图之间的间距"></a>调整子图之间的间距</h5><p>使用figure的subplots_adjust方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">subplots_adjust(left=None, bottom=None, right=None, top=None,</div><div class="line">                    wspace=None, hspace=None)</div></pre></td></tr></table></figure>
+<p>其中wspace和hspace控制子图的左右以及上下之间的间距。比如，我可以将他们都设置为0:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fig.subplots_adjust(wspace=0, hspace=0)</div></pre></td></tr></table></figure>
+<h3 id="二-图像的缩放与旋转"><a href="#二、图像的缩放与旋转" class="headerlink" title="二、图像的缩放与旋转"></a>二、图像的缩放与旋转</h3><p>缩放与旋转使用的是skimage的transform模块。具体的模块使用方法可以在python交互环境中输入help(transform)来查看</p>
+<h5 id="图像尺寸变换"><a href="#图像尺寸变换" class="headerlink" title="图像尺寸变换"></a>图像尺寸变换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 函数：skimage.transform.resize(image, output_shape)</div><div class="line">from skimage import transform,data</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">img = plt.imread(&quot;test.png&quot;)</div><div class="line">dst=transform.resize(img, (80, 60))</div><div class="line">plt.figure(&apos;resize&apos;)</div><div class="line"></div><div class="line">plt.subplot(121)</div><div class="line">plt.title(&apos;before resize&apos;)</div><div class="line">plt.imshow(img,plt.cm.gray)</div><div class="line"></div><div class="line">plt.subplot(122)</div><div class="line">plt.title(&apos;before resize&apos;)</div><div class="line">plt.imshow(dst,plt.cm.gray)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<center><br><img src="/img/m4.png" alt="m4"><br></center>
 
-<p>所有这些小部件就像现在最流行的图像标注系统的基岩。有许多图像标注领域的论文围绕着这些中心思想，而在这大多数论文中，大部分的不同或多或少的集中在以下几个方面：</p>
-<ol>
-<li>单词的特征向量如何学习。(例如：GloVe便是另一种单词特征向量的生成方式)</li>
-<li>反向传播是否应用于图像以及word2vec的训练之中。</li>
-<li>使用LSTM(长短时记忆单元)来代替RNN，从而解决RNN中的梯度消失问题。</li>
-<li>Stochastic vs soft attention: 在这里，我们讨论了Soft attention机制，其中不同的位置向量是根据其个体的概率进行聚合的。在stochastic mechanism中，基于概率分布对单个位置进行采样，并仅将采样位置的特征向量用于到RNN单元之中。</li>
+<h5 id="其他函数具体可以在python中使用help命令查看"><a href="#其他函数-具体可以在python中使用help命令查看" class="headerlink" title="其他函数(具体可以在python中使用help命令查看)"></a>其他函数(具体可以在python中使用help命令查看)</h5><ol>
+<li>按比例缩放rescale<br>函数格式为：<br>skimage.transform.rescale(image, scale[, …])<br>scale参数可以是单个float数，表示缩放的倍数，也可以是一个float型的tuple，如[0.2,0.5],表示将行列数分开进行缩放。</li>
 </ol>
-<h3 id="implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><p>如果你想学习Show attend and tell模型的源代码，可以参考我的Github的一个简单实现<a href="https://github.com/YanceyZhangDL/show_attend_and_tell.tensorflow" target="_blank" rel="external">show_attend_and_tell.tensorflow</a>。当然我只是fork了某位大神的<a href="https://github.com/jazzsaxmafia/show_attend_and_tell.tensorflow" target="_blank" rel="external">源代码</a>, 并将代码更新到Tensorflow的1.0版本。此外，基于我自己的简陋的机器配置，进行了简单的优化。</p>
-<h3 id="references"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
-<li>Xu, J. Ba, R. Kiros, A. Courville, R. Salakhutdinov, R. Zemel, and Y. Bengio, Show, attend and tell: Neural image caption generation with visual attention</li>
-<li>Vinyals, A. Toshev, S. Bengio, and D. Erhan, Show and tell: A neural image caption generator</li>
+<ol>
+<li>旋转 rotate<br>skimage.transform.rotate(image, angle[, …],resize=False)<br>angle参数是个float类型数，表示旋转的度数<br>resize用于控制在旋转时，是否改变大小 ，默认为False</li>
+</ol>
+<h3 id="三-图像保存"><a href="#三、图像保存" class="headerlink" title="三、图像保存"></a>三、图像保存</h3><p>$plt.savefig()$ 可以将当前图表保存到文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plt.savefig(&apos;haha.png&apos;, dpi=400, bbox_inches=&apos;tight&apos;)</div></pre></td></tr></table></figure>
+<p>参数：</p>
+<ul>
+<li>format = png pdf svg ps eps… : 导出的文件格式</li>
+<li>dpi：文件的分辨率</li>
+<li>facecolor, edgecolor : 图像的背景色 默认是 ‘w’ 白色</li>
+</ul>
+<h3 id="四-读取文件夹下面的多张图片"><a href="#四、读取文件夹下面的多张图片" class="headerlink" title="四、读取文件夹下面的多张图片"></a>四、读取文件夹下面的多张图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">def getAllImages(folder):</div><div class="line">    assert os.path.exists(folder)</div><div class="line">    assert os.path.isdir(folder)</div><div class="line">    imageList = os.listdir(folder)</div><div class="line">    #pprint.pprint(imageList)</div><div class="line">    imageList = [os.path.abspath(item) for item in imageList if os.path.isfile(os.path.join(folder, item))]</div><div class="line">    return imageList</div><div class="line"></div><div class="line">imglist = getAllImages(img_dir)</div></pre></td></tr></table></figure>
+<h4 id="五-参考文献"><a href="#五、参考文献" class="headerlink" title="五、参考文献"></a>五、参考文献</h4><ol>
+<li>坐标轴：<a href="http://stackoverflow.com/questions/9295026/matplotlib-plots-removing-axis-legends-and-white-spaces" target="_blank" rel="external">http://stackoverflow.com/questions/9295026/matplotlib-plots-removing-axis-legends-and-white-spaces</a></li>
+<li>尺度变换：<a href="http://blog.csdn.net/wuxinxin559/article/details/46363495" target="_blank" rel="external">http://blog.csdn.net/wuxinxin559/article/details/46363495</a></li>
+<li>图片保存：<a href="http://staticor.io/post/pydata/pydata-hui-tu-he-ke-shi-hua-1-plt" target="_blank" rel="external">http://staticor.io/post/pydata/pydata-hui-tu-he-ke-shi-hua-1-plt</a></li>
 </ol>
 
       
@@ -480,19 +474,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/深度学习/" rel="tag"># 深度学习</a>
+            <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
           
-            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+            <a href="/tags/坐标轴/" rel="tag"># 坐标轴</a>
           
-            <a href="/tags/RNN/" rel="tag"># RNN</a>
+            <a href="/tags/移动/" rel="tag"># 移动</a>
           
-            <a href="/tags/CNN/" rel="tag"># CNN</a>
+            <a href="/tags/隐藏/" rel="tag"># 隐藏</a>
           
-            <a href="/tags/Attention/" rel="tag"># Attention</a>
+            <a href="/tags/文件保存/" rel="tag"># 文件保存</a>
           
-            <a href="/tags/image-caption/" rel="tag"># image caption</a>
-          
-            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+            <a href="/tags/连续读取/" rel="tag"># 连续读取</a>
           
         </div>
       
@@ -505,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-上/" rel="next" title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[上]">
-                <i class="fa fa-chevron-left"></i> [译]Show, attend and tell: 深度学习进行语义理解的的细节[上]
+              <a href="/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/" rel="next" title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]">
+                <i class="fa fa-chevron-left"></i> [译]Show, attend and tell: 深度学习进行语义理解的的细节[下]
               </a>
             
           </div>
@@ -514,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/24/使用Matplotlib的一些奇淫技巧/" rel="prev" title="使用Matplotlib的一些奇淫技巧">
-                使用Matplotlib的一些奇淫技巧 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,8 +531,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/"
-           data-title="[译]Show, attend and tell: 深度学习进行语义理解的的细节[下]" data-url="http://yoursite.com/2017/03/22/Show-attend-and-tell-最先进的深度学习方法生成图像标注的细节-下/">
+      <div class="ds-thread" data-thread-key="2017/04/24/使用Matplotlib的一些奇淫技巧/"
+           data-title="使用Matplotlib的一些奇淫技巧" data-url="http://yoursite.com/2017/04/24/使用Matplotlib的一些奇淫技巧/">
       </div>
     
   </div>
@@ -648,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量空间"><span class="nav-number">1.</span> <span class="nav-text">向量空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真实世界图片中的噪声处理注意力机制"><span class="nav-number">2.</span> <span class="nav-text">真实世界图片中的噪声处理：注意力机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#implementation"><span class="nav-number">3.</span> <span class="nav-text">Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#references"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前沿"><span class="nav-number">1.</span> <span class="nav-text">前沿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一-坐标轴相关操作"><span class="nav-number">2.</span> <span class="nav-text">一、坐标轴相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#matplotlib隐藏坐标轴"><span class="nav-number">2.0.1.</span> <span class="nav-text">Matplotlib隐藏坐标轴</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移动坐标轴位置以及调整刻度范围"><span class="nav-number">2.0.2.</span> <span class="nav-text">移动坐标轴位置以及调整刻度范围</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改坐标轴范围以及坐标轴显示刻度"><span class="nav-number">2.0.3.</span> <span class="nav-text">修改坐标轴范围以及坐标轴显示刻度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#调整子图之间的间距"><span class="nav-number">2.0.4.</span> <span class="nav-text">调整子图之间的间距</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-图像的缩放与旋转"><span class="nav-number">3.</span> <span class="nav-text">二、图像的缩放与旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#图像尺寸变换"><span class="nav-number">3.0.1.</span> <span class="nav-text">图像尺寸变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他函数具体可以在python中使用help命令查看"><span class="nav-number">3.0.2.</span> <span class="nav-text">其他函数(具体可以在python中使用help命令查看)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-图像保存"><span class="nav-number">4.</span> <span class="nav-text">三、图像保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-读取文件夹下面的多张图片"><span class="nav-number">5.</span> <span class="nav-text">四、读取文件夹下面的多张图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#五-参考文献"><span class="nav-number">5.1.</span> <span class="nav-text">五、参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>
