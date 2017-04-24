@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/15/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E7%BA%AA%E5%BD%95/</loc>
+    <lastmod>2017-04-24T02:57:39.419Z</lastmod>
+    <data>
+        <display>
+        <title>个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)</title>
+        <pubTime>2017-03-15T01:08:13.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>域名</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/04/24/%E4%BD%BF%E7%94%A8Matplotlib%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2017-04-24T02:50:54.869Z</lastmod>
     <data>
@@ -78,27 +99,6 @@
         <tag>Attention</tag>
          
         <tag>image caption</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/03/15/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E7%BA%AA%E5%BD%95/</loc>
-    <lastmod>2017-03-23T01:38:25.950Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建全纪录(Github Pages + Hexo + 个人域名绑定)</title>
-        <pubTime>2017-03-15T01:08:13.000Z</pubTime>
-        
-        <tag>Github</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>域名</tag>
          
          
            
